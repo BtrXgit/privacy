@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeliosBytes | Premium Android Experiences</title>
+    <meta name="description" content="HeliosBytes - Crafting premium, privacy-first Android applications. Home of Anchor Launcher.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Immersive Background -->
+    <div class="cosmic-background">
+        <div class="starfield" id="stars"></div>
+        <div class="starfield" id="stars2"></div>
+        <div class="starfield" id="stars3"></div>
+        <div class="helios-core"></div>
+        <div class="helios-flare"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar slide-down">
+        <div class="nav-brand">
+            <div class="logo-icon">✨</div>
+            <span class="logo-text">HELIOS<span class="accent">BYTES</span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#apps">Products</a>
+            <a href="mailto:hello@heliosbytes.space" class="btn-outline">Contact Us</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content fade-in-up">
+                <div class="badge">Independent Developer Studio</div>
+                <h1 class="hero-title">Engineering <span class="text-gradient">Stunning</span><br>Mobile Experiences.</h1>
+                <p class="hero-subtitle">HeliosBytes builds premium, privacy-first Android applications with unparalleled design and seamless performance.</p>
+                <div class="hero-cta">
+                    <a href="#apps" class="btn-primary">View Our Work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apps Section -->
+        <section id="apps" class="products-section">
+            <div class="section-header fade-in-up delay-1">
+                <h2>Our Ecosystem</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="products-grid">
+                <!-- Anchor Launcher Card -->
+                <div class="product-card glass-card fade-in-up delay-2">
+                    <div class="card-glow"></div>
+                    <div class="product-icon anchor-icon">⚓</div>
+                    <div class="product-info">
+                        <h3>Anchor Launcher</h3>
+                        <p class="product-desc">A premium Android home launcher built with Flutter. Fast, elegant, and uncompromising on privacy. Your device data belongs to you.</p>
+                        
+                        <div class="product-actions">
+                            <a href="/anchor-privacy/" class="action-link privacy-link">
+                                <span>📄</span> Privacy Policy
+                            </a>
+                            <a href="#" class="action-link store-link">
+                                <span>📱</span> Get on Google Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Placeholder -->
+                <div class="product-card glass-card coming-soon fade-in-up delay-3">
+                    <div class="product-icon">🚀</div>
+                    <div class="product-info">
+                        <h3>Project Nebula</h3>
+                        <p class="product-desc">Something incredible is brewing in the cosmos. A new utility to elevate your productivity.</p>
+                        <div class="status-badge">In Development</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content fade-in-up delay-4">
+            <div class="footer-brand">
+                <span class="logo-text">HELIOS<span class="accent">BYTES</span></span>
+                <p>Crafted with passion. Space-grade software.</p>
+            </div>
+            <div class="footer-links">
+                <a href="/anchor-privacy/">Anchor Privacy Policy</a>
+                <a href="mailto:hello@heliosbytes.space">hello@heliosbytes.space</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 HeliosBytes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive script for background -->
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const core = document.querySelector('.helios-core');
+            const flare = document.querySelector('.helios-flare');
+            const x = (e.clientX / window.innerWidth - 0.5) * 40;
+            const y = (e.clientY / window.innerHeight - 0.5) * 40;
+            
+            core.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+            flare.style.transform = `translate(${x * 1.5}px, ${y * 1.5}px) translate(-50%, -50%)`;
+        });
+    </script>
+</body>
+</html>
