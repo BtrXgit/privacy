@@ -4,29 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anchor Launcher | Reimagine Your Home Screen</title>
+    <title>Anchor Launcher | Minimal & Fast Android Home Screen</title>
     <meta name="description"
-        content="Anchor Launcher is a premium, privacy-first productivity launcher for Android. Fast, fluid, and beautiful.">
+        content="Anchor Launcher is a minimal, fast, and privacy-first Android home screen built for productivity, aesthetics, and digital wellbeing.">
 
     <!-- Google Fonts: Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="background-effects">
-        <div class="glow-orb orb-1"></div>
-        <div class="glow-orb orb-2"></div>
-        <div class="glow-orb orb-3"></div>
-    </div>
-
     <nav>
         <a href="index.html" class="nav-brand">
-            <div class="logo-icon">⚓</div>
-            <div>Anchor Launcher</div>
+            <img src="logo.svg" alt="Anchor Launcher Logo" class="nav-logo">
+            <span>Anchor Launcher</span>
         </a>
         <div class="nav-links">
             <a href="index.html" class="active">Home</a>
@@ -37,12 +31,12 @@
 
     <div class="container">
         <main>
-            <section class="hero fade-in-up delay-1">
+            <section class="hero">
+                <img src="logo.svg" alt="Anchor Launcher Logo" class="hero-logo">
                 <h1>Reimagine Your Home Screen</h1>
-                <p>A premium, privacy-first productivity launcher designed to keep you focused and in control.
-                    Beautifully crafted for Android.</p>
+                <p>A minimal, fast, and privacy-first Android launcher designed for productivity, digital wellbeing, and aesthetic control.</p>
                 <a href="#" class="cta-button">
-                    <svg xmlns="http://www.w3.org/.svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                         <polyline points="7 10 12 15 17 10"></polyline>
@@ -52,32 +46,30 @@
                 </a>
             </section>
 
-            <section class="features-grid fade-in-up delay-2">
+            <section class="features-grid">
                 <div class="feature-card glass-card">
                     <div class="feature-icon">🛡️</div>
                     <h3>Privacy First</h3>
-                    <p>Your data stays on your device. No tracking, no data selling, and full control over permissions.
-                    </p>
+                    <p>Your contacts, app lists, and screen time data stay 100% on your device. Zero tracking, no data selling.</p>
                 </div>
 
                 <div class="feature-card glass-card">
                     <div class="feature-icon">⚡</div>
-                    <h3>Fast & Fluid</h3>
-                    <p>Optimized for performance. Enjoy smooth animations and instant app launches without any lag.</p>
+                    <h3>Fast & Lightweight</h3>
+                    <p>Built for fluid performance with Signals state management, smooth transitions, and instant app launching.</p>
                 </div>
 
                 <div class="feature-card glass-card">
-                    <div class="feature-icon">✨</div>
-                    <h3>Stunning Design</h3>
-                    <p>Glassmorphism UI, dynamic weather, and beautiful typography make your home screen truly yours.
-                    </p>
+                    <div class="feature-icon">⏳</div>
+                    <h3>Digital Wellbeing</h3>
+                    <p>Track daily app usage, set screen time limits, and reduce distractions with smart usage alerts.</p>
                 </div>
             </section>
         </main>
 
-        <footer class="fade-in-up delay-3">
+        <footer>
             <p>&copy; 2026 Anchor Launcher. All rights reserved.</p>
-            <p style="margin-top: 10px;">
+            <p style="margin-top: 8px;">
                 <a href="privacy.html" style="color: var(--text-secondary); text-decoration: none;">Privacy Policy</a>
                 &nbsp;|&nbsp;
                 <a href="terms-of-use.html" style="color: var(--text-secondary); text-decoration: none;">Terms of Use</a>
