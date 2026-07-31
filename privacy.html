@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Anchor Launcher</title>
     <meta name="description"
-        content="Official Google Play Console Privacy Policy and Data Safety Disclosures for Anchor Launcher. Learn how we handle system permissions, local processing, and data deletion.">
+        content="Privacy Policy for Anchor Launcher. Learn how we handle system permissions, local processing, data safety, and user privacy.">
 
     <!-- Google Fonts: Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,67 +41,65 @@
 
         <main>
             <section class="glass-card">
-                <h2>1. Application Identity & Privacy Commitment</h2>
-                <p>Welcome to <strong>Anchor Launcher</strong> ("App", "we", "our", or "us"), provided by HeliosBytes ("Developer"). We are committed to maintaining user trust through total transparency regarding data practices, system permissions, and device security.</p>
-                <p><strong>App Identifier:</strong> Anchor Launcher (Android Home Screen Launcher)</p>
-                <p><strong>Developer Contact:</strong> <a href="mailto:heliosbytes@outlook.com" style="color: var(--text-primary);">heliosbytes@outlook.com</a></p>
-                <p>Anchor Launcher is engineered with a strict <strong>local-first architecture</strong>. Your personal contacts, application drawer contents, screen time metrics, and search queries belong solely to you. Feature processing occurs locally on your device, and we never sell, rent, or trade user data with third-party advertisers or data brokers.</p>
-                <p>This Privacy Policy complies with global data protection frameworks (including EU GDPR and California CCPA/CPRA) and strictly adheres to the <strong>Google Play Console Developer Program Policies</strong>.</p>
+                <h2>1. Introduction & Privacy Commitment</h2>
+                <p>Welcome to <strong>Anchor Launcher</strong> ("we," "our," or "us"). We are committed to safeguarding your personal privacy and providing transparent, secure, and high-performance home screen software for Android devices.</p>
+                <p>Anchor Launcher is engineered around a <strong>local-first architecture</strong>. Your personal files, contacts, app lists, notification contents, and daily usage habits belong exclusively to you. Primary feature processing occurs locally on your device, and we never sell, rent, or monetize personal information with third-party advertisers or data brokers.</p>
+                <p>This Privacy Policy complies with global data protection standards, including the EU General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA/CPRA).</p>
             </section>
 
             <section class="glass-card">
-                <h2>2. Device Permissions & Play Policy Justifications</h2>
-                <p>To function as a default home screen desktop replacement (<code>android.intent.category.HOME</code>), Anchor Launcher requests specific Android system permissions. Below is the operational scope and Google Play Policy justification for each permission:</p>
+                <h2>2. System Permissions & Operational Scope</h2>
+                <p>To function as a primary Android home screen desktop replacement (<code>android.intent.category.HOME</code>), Anchor Launcher requests specific device permissions. The operational purpose for each permission is detailed below:</p>
 
                 <div class="permission-grid">
                     <div class="permission-item">
                         <div class="permission-icon-wrapper">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                            <h3>Installed App Packages</h3>
+                            <h3>App Packages Access</h3>
                         </div>
                         <code>QUERY_ALL_PACKAGES</code>
-                        <p><strong>Play Policy Exception:</strong> Launcher Core Exception (Core App Functionality). Required to index, display, search, organize into custom folders, and launch installed device applications directly from your home screen desktop and app drawer.</p>
-                        <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> Package lists are queried strictly locally and are never stored or transmitted off-device.</p>
+                        <p><strong>Purpose:</strong> Primary launcher core feature. Required to detect, categorize, display, search, and launch installed applications from your home screen desktop and app drawer.</p>
+                        <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> Queried strictly on-device. Package inventories are never transmitted off your device.</p>
                     </div>
 
                     <div class="permission-item">
                         <div class="permission-icon-wrapper">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                            <h3>Digital Wellbeing & Usage Stats</h3>
+                            <h3>Digital Wellbeing & Usage</h3>
                         </div>
                         <code>PACKAGE_USAGE_STATS</code>
-                        <p><strong>Play Policy Justification:</strong> Special App Access (Digital Wellbeing & Productivity). Powers built-in daily screen time tracking, application launch metrics, and limit reminder popups to assist users in curbing digital addiction.</p>
-                        <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> Usage statistics remain in sandboxed private local storage.</p>
+                        <p><strong>Purpose:</strong> Special app access. Powers built-in screen time tracking, daily app usage metrics, and alert popups when custom usage limits are reached.</p>
+                        <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> Usage statistics remain in private local application storage.</p>
                     </div>
 
                     <div class="permission-item">
                         <div class="permission-icon-wrapper">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                            <h3>Notification Badges</h3>
+                            <h3>Notification Listener</h3>
                         </div>
                         <code>BIND_NOTIFICATION_LISTENER</code>
-                        <p><strong>Play Policy Justification:</strong> Special Access (App Functionality / Notification Dots). Reads active notification counts to render visual notification indicator dots on application launcher tiles.</p>
-                        <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> Notification contents are read solely to update badge counts and are not saved.</p>
+                        <p><strong>Purpose:</strong> Special access. Reads active notification counts to render visual notification dots and unread badge indicators on app icons.</p>
+                        <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> Notification text is processed ephemerally on-device solely to compute badge counts and is not stored.</p>
                     </div>
 
                     <div class="permission-item">
                         <div class="permission-icon-wrapper">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                            <h3>Contacts Search & Quick Dial</h3>
+                            <h3>Contacts Search</h3>
                         </div>
                         <code>READ_CONTACTS</code>
-                        <p><strong>Play Policy Justification:</strong> Optional Runtime Permission (App Functionality). Allows users to search for phone contacts and initiate quick dialing directly from the launcher search overlay.</p>
-                        <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> Contact details are indexed locally and never transmitted to any external server.</p>
+                        <p><strong>Purpose:</strong> Optional runtime permission. Allows searching for phone contacts and dialing numbers directly from the search overlay.</p>
+                        <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> Contact details are indexed and queried exclusively on your device.</p>
                     </div>
 
                     <div class="permission-item">
                         <div class="permission-icon-wrapper">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            <h3>Live Weather Location</h3>
+                            <h3>Weather Location</h3>
                         </div>
                         <code>ACCESS_FINE/COARSE_LOCATION</code>
-                        <p><strong>Play Policy Justification:</strong> Optional Runtime Permission (Weather Widget). Retrieves local coordinates to display accurate weather forecasts and temperatures on the home screen widget.</p>
-                        <p><strong>Handling:</strong> <span class="badge">Ephemeral HTTPS</span> Coordinates are sent directly to Open-Meteo API over HTTPS without user tracking or location history retention.</p>
+                        <p><strong>Purpose:</strong> Optional runtime permission. Retrieves local geographic coordinates to display live weather forecasts and temperatures on your home screen.</p>
+                        <p><strong>Handling:</strong> <span class="badge">Ephemeral HTTPS</span> Coordinates are sent ephemerally to the privacy-friendly Open-Meteo API over HTTPS. Location history is not logged or tracked.</p>
                     </div>
 
                     <div class="permission-item">
@@ -110,25 +108,25 @@
                             <h3>Voice Search</h3>
                         </div>
                         <code>RECORD_AUDIO</code>
-                        <p><strong>Play Policy Justification:</strong> Optional Runtime Permission (Hands-Free Search). Enables speech-to-text input when using the launcher search bar.</p>
-                        <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> Audio input is processed locally by Android's native speech recognition service and is not saved.</p>
+                        <p><strong>Purpose:</strong> Optional runtime permission. Enables hands-free voice input in the search bar via Android speech recognition.</p>
+                        <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> Audio input is converted to text locally by system services and is not retained.</p>
                     </div>
 
                     <div class="permission-item">
                         <div class="permission-icon-wrapper">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-                            <h3>System Widgets & Wallpaper</h3>
+                            <h3>Widgets & Customization</h3>
                         </div>
                         <code>BIND_APPWIDGET & SET_WALLPAPER</code>
-                        <p><strong>Play Policy Justification:</strong> Core Launcher Features. Enables placing native Android system widgets on the desktop and updating device wallpapers.</p>
-                        <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> Managed strictly via Android OS framework APIs.</p>
+                        <p><strong>Purpose:</strong> Primary launcher core feature. Enables hosting native system widgets on the desktop and setting home screen wallpapers.</p>
+                        <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> Managed strictly via native Android operating system APIs.</p>
                     </div>
                 </div>
             </section>
 
             <section class="glass-card">
-                <h2>3. Play Console Data Safety Form Matrix</h2>
-                <p>The matrix below reflects the exact data handling declarations submitted in the <strong>Google Play Console Data Safety Form</strong>:</p>
+                <h2>3. Data Collection, Handling & Transit Safety</h2>
+                <p>The table below provides a comprehensive summary of all data types processed by Anchor Launcher, their storage location, transit encryption status, and purpose:</p>
 
                 <div class="table-wrapper">
                     <table class="data-table">
@@ -136,7 +134,7 @@
                             <tr>
                                 <th>Data Category</th>
                                 <th>Data Type</th>
-                                <th>Storage & Transmission</th>
+                                <th>Storage / Processing</th>
                                 <th>Encrypted in Transit?</th>
                                 <th>Requirement</th>
                                 <th>Purpose</th>
@@ -145,25 +143,25 @@
                         <tbody>
                             <tr>
                                 <td><strong>Location</strong></td>
-                                <td>Approximate & Precise Coordinates</td>
+                                <td>Approximate & Precise Location</td>
                                 <td><span class="badge">Ephemeral (Open-Meteo)</span></td>
                                 <td>Yes (HTTPS / TLS)</td>
                                 <td><span class="badge">Optional</span></td>
-                                <td>App Functionality (Weather Widget)</td>
+                                <td>App Functionality (Weather Forecast)</td>
                             </tr>
                             <tr>
-                                <td><strong>Personal Info / Contacts</strong></td>
+                                <td><strong>Contacts</strong></td>
                                 <td>Contact Names & Phone Numbers</td>
-                                <td><span class="badge">Local Only (On-Device)</span></td>
-                                <td>N/A (Processed Locally)</td>
+                                <td><span class="badge">Local Only</span></td>
+                                <td>N/A (Local)</td>
                                 <td><span class="badge">Optional</span></td>
-                                <td>App Functionality (Quick Dial & Search)</td>
+                                <td>App Functionality (Search & Dialing)</td>
                             </tr>
                             <tr>
                                 <td><strong>App Activity</strong></td>
                                 <td>Installed Packages & Usage Stats</td>
-                                <td><span class="badge">Local Only (On-Device)</span></td>
-                                <td>N/A (Processed Locally)</td>
+                                <td><span class="badge">Local Only</span></td>
+                                <td>N/A (Local)</td>
                                 <td><span class="badge">Required</span></td>
                                 <td>Launcher Core & Digital Wellbeing</td>
                             </tr>
@@ -173,7 +171,7 @@
                                 <td><span class="badge">Collected Off-Device</span></td>
                                 <td>Yes (HTTPS / TLS)</td>
                                 <td><span class="badge">Required</span></td>
-                                <td>Analytics & Diagnostics</td>
+                                <td>Diagnostics & App Performance</td>
                             </tr>
                             <tr>
                                 <td><strong>App Info & Performance</strong></td>
@@ -181,21 +179,21 @@
                                 <td><span class="badge">Collected Off-Device</span></td>
                                 <td>Yes (HTTPS / TLS)</td>
                                 <td><span class="badge">Required</span></td>
-                                <td>Analytics & Performance</td>
+                                <td>Analytics & Diagnostics</td>
                             </tr>
                             <tr>
-                                <td><strong>Device or Other IDs</strong></td>
+                                <td><strong>Device IDs</strong></td>
                                 <td>Device / Instance IDs (Firebase)</td>
                                 <td><span class="badge">Collected Off-Device</span></td>
                                 <td>Yes (HTTPS / TLS)</td>
                                 <td><span class="badge">Required</span></td>
-                                <td>Analytics & Diagnostics</td>
+                                <td>Analytics & App Stability</td>
                             </tr>
                             <tr>
                                 <td><strong>Audio</strong></td>
                                 <td>Voice Input (Speech-to-Text)</td>
-                                <td><span class="badge">Local Only (On-Device)</span></td>
-                                <td>N/A (Processed Locally)</td>
+                                <td><span class="badge">Local Only</span></td>
+                                <td>N/A (Local)</td>
                                 <td><span class="badge">Optional</span></td>
                                 <td>App Functionality (Voice Search)</td>
                             </tr>
@@ -205,15 +203,15 @@
             </section>
 
             <section class="glass-card">
-                <h2>4. Data Security, Encryption & No-Sharing Policy</h2>
-                <p>We enforce strict data security standards across the application:</p>
+                <h2>4. Data Security & Third-Party Integrations</h2>
+                <p>We enforce strict security protections across all components of Anchor Launcher:</p>
                 <ul>
-                    <li><strong>Encryption in Transit:</strong> 100% of network traffic transmitted to external services (weather queries and diagnostic telemetry) is encrypted using industry-standard Transport Layer Security (TLS / HTTPS).</li>
-                    <li><strong>Encrypted Local Storage:</strong> Application settings, layout preferences, and digital wellbeing data are stored in a local SQLite database (via <code>drift</code>) within your device's private, sandboxed app directory.</li>
-                    <li><strong>No Data Monetisation or Advertising:</strong> Anchor Launcher contains zero third-party advertising SDKs, ad networks, or user profiling trackers. We do not sell, rent, or monetize your personal information under any circumstances.</li>
-                    <li><strong>Third-Party Infrastructure:</strong>
+                    <li><strong>Encryption in Transit:</strong> 100% of network requests to external APIs (weather requests and stability telemetry) are encrypted using Transport Layer Security (TLS / HTTPS).</li>
+                    <li><strong>Encrypted Local Storage:</strong> User preferences, task items, and usage statistics are stored securely in a local SQLite database (using <code>drift</code>) inside private application storage.</li>
+                    <li><strong>No Data Commercialization:</strong> Anchor Launcher does not include third-party advertising SDKs or tracking networks. We do not sell or trade user data.</li>
+                    <li><strong>Third-Party Services Used:</strong>
                         <ul>
-                            <li><strong>Open-Meteo API:</strong> Fetches live weather forecasts without user registration, tracking, or location logging.</li>
+                            <li><strong>Open-Meteo API:</strong> Provides live weather data without tracking user identities or storing location logs.</li>
                             <li><strong>Google Firebase (Analytics & Crashlytics):</strong> Collects anonymized crash diagnostics and system interaction metrics to improve application stability.</li>
                         </ul>
                     </li>
@@ -221,33 +219,33 @@
             </section>
 
             <section class="glass-card">
-                <h2>5. Data Deletion Policy & User Rights</h2>
-                <p>In compliance with <strong>Google Play Console Data Deletion Requirements</strong>, users have complete authority to manage or request deletion of their data:</p>
+                <h2>5. User Rights, Data Retention & Deletion Instructions</h2>
+                <p>Users have complete authority to manage or request deletion of their data:</p>
                 <ul>
-                    <li><strong>Deleting Local Data:</strong> You can purge all locally stored settings, database records, screen time statistics, and cached weather data instantly by clearing app storage via <em>Android Settings &gt; Apps &gt; Anchor Launcher &gt; Storage &gt; Clear Data</em> or by uninstalling the application.</li>
-                    <li><strong>Revoking Permissions:</strong> Optional runtime permissions (Location, Contacts, Microphone) can be revoked at any time via <em>Android Settings &gt; Apps &gt; Anchor Launcher &gt; Permissions</em>.</li>
-                    <li><strong>Submitting a Data Deletion Request:</strong> If you wish to submit a formal inquiry or request deletion of anonymized diagnostic telemetry data, please send an email to <a href="mailto:heliosbytes@outlook.com" style="color: var(--text-primary);">heliosbytes@outlook.com</a> with the subject line <strong>"Data Deletion Request"</strong>. Data deletion requests are processed within 30 days.</li>
+                    <li><strong>Revoking System Permissions:</strong> You can manage or revoke optional permissions (Location, Contacts, Microphone) at any time via <em>Android Settings &gt; Apps &gt; Anchor Launcher &gt; Permissions</em>.</li>
+                    <li><strong>Clearing Stored Local Data:</strong> You can permanently erase all local application databases and configuration files via <em>Android Settings &gt; Apps &gt; Anchor Launcher &gt; Storage &gt; Clear Storage / Data</em> or by uninstalling the application.</li>
+                    <li><strong>Data Deletion Requests:</strong> You may submit inquiries or request deletion of telemetry records by emailing our privacy support team at <a href="mailto:heliosbytes@outlook.com" style="color: var(--text-primary);">heliosbytes@outlook.com</a>.</li>
                 </ul>
             </section>
 
             <section class="glass-card">
                 <h2>6. International Privacy Rights (GDPR & CCPA)</h2>
-                <p>Under international privacy legislation (such as EU GDPR and California CCPA/CPRA), users possess the right to access, rectify, or request erasure of their personal data. Because Anchor Launcher processes personal data locally on your device, these rights are directly actionable by managing or deleting local data on your device.</p>
+                <p>Under applicable international data protection regulations (such as EU GDPR and California CCPA/CPRA), users hold specific rights to access, correct, or request erasure of personal data. Because Anchor Launcher processes personal data locally on your device, these rights are directly executable by clearing or deleting local data on your device.</p>
             </section>
 
             <section class="glass-card">
-                <h2>7. Children's Privacy (Families Policy)</h2>
-                <p>Anchor Launcher is designed as a general-audience productivity tool and does not knowingly collect or solicit personal data from children under 13 (or under 16 in applicable jurisdictions). If you believe a child has provided personal information, please contact us at <a href="mailto:heliosbytes@outlook.com" style="color: var(--text-primary);">heliosbytes@outlook.com</a> so we can take prompt corrective action.</p>
+                <h2>7. Children's Privacy</h2>
+                <p>Anchor Launcher is not directed at children under the age of 13 (or under 16 in applicable jurisdictions). We do not knowingly collect personal information from children. If you believe a minor has submitted personal data to us, please contact us for prompt removal.</p>
             </section>
 
             <section class="glass-card">
-                <h2>8. Policy Updates</h2>
-                <p>We may revise this Privacy Policy periodically to reflect app updates, security enhancements, or legal regulatory requirements. Updated versions will be posted on this page with a revised "Last Updated" date.</p>
+                <h2>8. Policy Revisions</h2>
+                <p>We may update this Privacy Policy periodically to reflect app enhancements or legal updates. Revisions will be posted on this page with an updated "Last Updated" date.</p>
             </section>
 
             <section class="glass-card">
-                <h2>9. Contact Information</h2>
-                <p>For any policy questions, permission inquiries, or data deletion requests, please contact our privacy team:</p>
+                <h2>9. Contact Us</h2>
+                <p>If you have any questions, concerns, or data deletion requests regarding this Privacy Policy, please contact us at:</p>
                 <a href="mailto:heliosbytes@outlook.com" class="contact-button">heliosbytes@outlook.com</a>
             </section>
         </main>
