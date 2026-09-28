@@ -36,7 +36,7 @@
                 <span class="brand-name">Anchor Launcher</span>
             </div>
             <h1 class="page-title">Privacy Policy</h1>
-            <p class="last-updated">Last Updated: <strong>September 11, 2026</strong></p>
+            <p class="last-updated">Last Updated: <strong>September 27, 2026</strong></p>
         </header>
 
         <main>
@@ -110,6 +110,35 @@
                         <code>USE_BIOMETRIC</code>
                         <p><strong>Purpose:</strong> Optional security feature. Protects locked apps, hidden apps, and security settings using system biometric authentication (Fingerprint / Face Unlock).</p>
                         <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> Delegated strictly to Android OS <code>BiometricPrompt</code> and hardware Keystore. Anchor Launcher never accesses or stores raw biometric data.</p>
+                    </div>
+
+                    <div class="permission-item">
+                        <div class="permission-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                                stroke-linejoin="round" class="svg-icon">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                            </svg>
+                            <h3>Quick Shortcuts & System Status</h3>
+                        </div>
+                        <code>ACCESS_NETWORK_STATE, ACCESS_WIFI_STATE, BLUETOOTH, FLASHLIGHT</code>
+                        <p><strong>Purpose:</strong> Powers the clock quick shortcuts bar. Used to locally display live status highlights (Wi-Fi, Bluetooth, Hotspot, Flashlight, Sound mode, and Alarms) and trigger quick toggles.</p>
+                        <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> Read strictly via on-device Android system binders and Settings.Global. No connection identifiers or status data are ever logged or transmitted.</p>
+                    </div>
+
+                    <div class="permission-item">
+                        <div class="permission-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                                stroke-linejoin="round" class="svg-icon">
+                                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <h3>Approximate Location for Weather</h3>
+                        </div>
+                        <code>ACCESS_COARSE_LOCATION</code>
+                        <p><strong>Purpose:</strong> Optional feature. Allows fetching real-time local weather forecasts and temperatures for the homescreen clock and weather widgets.</p>
+                        <p><strong>Handling:</strong> <span class="badge">Ephemeral HTTPS</span> Coordinates are sent ephemerally to Open-Meteo API over encrypted TLS without personal identifiers and are never stored on external servers.</p>
                     </div>
 
                     <div class="permission-item">
@@ -203,14 +232,14 @@
                             </svg>
                             <h3>Widgets & Wallpapers</h3>
                         </div>
-                        <code>BIND_APPWIDGET & SET_WALLPAPER</code>
+                        <code>BIND_APPWIDGET, SET_WALLPAPER, READ_MEDIA_*</code>
                         <p><strong>Purpose:</strong> Primary launcher core feature. Enables hosting native system
-                            widgets on the desktop and setting home screen wallpapers.</p>
+                            widgets on the desktop, picking custom wallpaper images, and applying home screen themes.</p>
                         <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> Managed strictly
-                            via native Android operating system APIs.</p>
+                            via native Android operating system APIs and private local storage.</p>
                     </div>
                 </div>
-            </section></section>
+            </section>
 
             <section class="glass-card">
                 <h2>3. Data Collection, Handling & Transit Safety</h2>
@@ -232,11 +261,11 @@
                         <tbody>
                             <tr>
                                 <td><strong>Location</strong></td>
-                                <td>Approximate Location (IP Geolocation / City Name)</td>
-                                <td><span class="badge">Ephemeral (Open-Meteo & IP Geolocation)</span></td>
+                                <td>Approximate Location (Coarse Coordinates / City Name)</td>
+                                <td><span class="badge">Ephemeral (Open-Meteo API)</span></td>
                                 <td>Yes (HTTPS / TLS)</td>
                                 <td><span class="badge">Optional</span></td>
-                                <td>App Functionality (Weather Forecast)</td>
+                                <td>App Functionality (Weather Forecast & Widget)</td>
                             </tr>
                             <tr>
                                 <td><strong>Personal Productivity</strong></td>
@@ -248,11 +277,11 @@
                             </tr>
                             <tr>
                                 <td><strong>Photos & Media</strong></td>
-                                <td>User-Selected Wallpaper Images</td>
+                                <td>User-Selected Wallpaper Images & Media Icons</td>
                                 <td><span class="badge">100% Local On-Device</span> (Private Application Storage)</td>
                                 <td>N/A (Never Transmitted)</td>
                                 <td><span class="badge">Optional</span></td>
-                                <td>Custom Wallpaper & Material You Color Extraction</td>
+                                <td>Custom Wallpaper & Dynamic Color Palette Extraction</td>
                             </tr>
                             <tr>
                                 <td><strong>Security Credentials</strong></td>
@@ -268,7 +297,7 @@
                                 <td><span class="badge">Local Only</span></td>
                                 <td>N/A (Local)</td>
                                 <td><span class="badge">Optional</span></td>
-                                <td>App Functionality (Search & Dialing)</td>
+                                <td>App Functionality (Search & Quick Dialing)</td>
                             </tr>
                             <tr>
                                 <td><strong>App Activity</strong></td>
@@ -279,12 +308,20 @@
                                 <td>Launcher Core & Digital Wellbeing</td>
                             </tr>
                             <tr>
+                                <td><strong>System Toggles & State</strong></td>
+                                <td>Wi-Fi, Bluetooth, Hotspot, Sound Mode, Alarm & Flashlight Status</td>
+                                <td><span class="badge">100% Local On-Device</span></td>
+                                <td>N/A (Never Transmitted)</td>
+                                <td><span class="badge">Optional</span></td>
+                                <td>Homescreen Clock Quick Shortcuts & Toggle Status Highlighting</td>
+                            </tr>
+                            <tr>
                                 <td><strong>Financial Info</strong></td>
                                 <td>Purchase Tokens & Subscription Entitlements</td>
                                 <td><span class="badge">Google Play In-App Billing</span></td>
                                 <td>Yes (HTTPS / TLS)</td>
                                 <td><span class="badge">Optional</span></td>
-                                <td>Premium Upgrades (No financial data stored by app)</td>
+                                <td>Premium Upgrades (No financial card data stored by app)</td>
                             </tr>
                             <tr>
                                 <td><strong>App Info & Performance</strong></td>
@@ -292,7 +329,7 @@
                                 <td><span class="badge">Collected Off-Device</span></td>
                                 <td>Yes (HTTPS / TLS)</td>
                                 <td><span class="badge">Required</span></td>
-                                <td>Diagnostics & App Performance</td>
+                                <td>Diagnostics & App Stability</td>
                             </tr>
                             <tr>
                                 <td><strong>App Info & Performance</strong></td>
@@ -300,7 +337,7 @@
                                 <td><span class="badge">Collected Off-Device</span></td>
                                 <td>Yes (HTTPS / TLS)</td>
                                 <td><span class="badge">Required</span></td>
-                                <td>Analytics & Diagnostics</td>
+                                <td>Anonymized Performance & Diagnostics</td>
                             </tr>
                             <tr>
                                 <td><strong>Device & User IDs</strong></td>
@@ -308,7 +345,7 @@
                                 <td><span class="badge">Collected Off-Device</span></td>
                                 <td>Yes (HTTPS / TLS)</td>
                                 <td><span class="badge">Required</span></td>
-                                <td>Analytics Cohort Tracking & Stability</td>
+                                <td>Stability Telemetry & Cohort Verification</td>
                             </tr>
                             <tr>
                                 <td><strong>Audio</strong></td>
@@ -334,11 +371,11 @@
                         stored securely in a local SQLite database (using <code>drift</code>) inside private application
                         storage.</li>
                     <li><strong>No Data Commercialization:</strong> Anchor Launcher does not include third-party
-                        advertising SDKs or tracking networks. We do not sell or trade user data.</li>
+                        advertising SDKs or tracking networks. We do not sell, rent, or trade user data.</li>
                     <li><strong>Third-Party Services Used:</strong>
                         <ul>
                             <li><strong>Open-Meteo API:</strong> Provides live weather forecasts and geocoding over encrypted HTTPS without tracking user identities or storing location logs.</li>
-                            <li><strong>Fibrly Wallpaper API (<code>api.fibrly.in</code>):</strong> Supplies curated 4K online wallpapers and categories. Selected wallpapers are fetched over HTTPS and cached on-device.</li>
+                            <li><strong>Fibrly Wallpaper API (<code>api.fibrly.in</code>):</strong> Supplies curated 4K online wallpapers and categories. Selected wallpapers are fetched over HTTPS and cached locally on-device.</li>
                             <li><strong>Google Firebase (Analytics & Crashlytics):</strong> Collects anonymized crash diagnostics and system interaction metrics to improve application stability.</li>
                             <li><strong>Google Play In-App Billing:</strong> Handles purchase processing and entitlement verification for optional premium upgrades without exposing sensitive financial info to us.</li>
                             <li><strong>External Search Engines:</strong> When initiated by the user, web search queries are passed directly to the chosen search provider (Google, Bing, DuckDuckGo, Brave, Yahoo, Yandex).</li>
@@ -352,7 +389,7 @@
                 <p>Users have complete authority to manage or request deletion of their data:</p>
                 <ul>
                     <li><strong>Revoking System Permissions:</strong> You can manage or revoke optional permissions
-                        (Location, Contacts, Microphone) at any time via <em>Android Settings &gt; Apps &gt; Anchor
+                        (Location, Contacts, Microphone, Bluetooth) at any time via <em>Android Settings &gt; Apps &gt; Anchor
                             Launcher &gt; Permissions</em>.</li>
                     <li><strong>Clearing Stored Local Data:</strong> You can permanently erase all local application
                         databases and configuration files via <em>Android Settings &gt; Apps &gt; Anchor Launcher &gt;
