@@ -232,11 +232,14 @@
                             </svg>
                             <h3>Widgets & Wallpapers</h3>
                         </div>
-                        <code>BIND_APPWIDGET, SET_WALLPAPER, READ_MEDIA_*</code>
+                        <code>BIND_APPWIDGET, SET_WALLPAPER, SET_WALLPAPER_HINTS</code>
                         <p><strong>Purpose:</strong> Primary launcher core feature. Enables hosting native system
-                            widgets on the desktop, picking custom wallpaper images, and applying home screen themes.</p>
-                        <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> Managed strictly
-                            via native Android operating system APIs and private local storage.</p>
+                            widgets on the desktop, setting home screen wallpapers, and applying themes. When selecting a custom
+                            wallpaper, Anchor utilizes the secure <strong>Android System Photo Picker</strong>. Anchor does <strong>NOT</strong>
+                            request or require broad media permissions (<code>READ_MEDIA_IMAGES</code> or <code>READ_EXTERNAL_STORAGE</code>)
+                            and never scans or accesses your photo library.</p>
+                        <p><strong>Handling:</strong> <span class="badge">100% Local On-Device</span> The user-selected
+                            wallpaper file is processed strictly on-device in private application storage for display and dynamic Material You color extraction.</p>
                     </div>
                 </div>
             </section>
@@ -277,7 +280,7 @@
                             </tr>
                             <tr>
                                 <td><strong>Photos & Media</strong></td>
-                                <td>User-Selected Wallpaper Images & Media Icons</td>
+                                <td>User-Selected Wallpaper (via System Photo Picker; No broad storage access)</td>
                                 <td><span class="badge">100% Local On-Device</span> (Private Application Storage)</td>
                                 <td>N/A (Never Transmitted)</td>
                                 <td><span class="badge">Optional</span></td>
